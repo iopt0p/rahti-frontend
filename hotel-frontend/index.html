@@ -2,15 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="./script.js" defer></script>
     <title>Hotel booking</title>
 </head>
 <body>
 
-<div id="rooms">
+<form id="booking-form">
+    <select id="booking-select" name="room_id" required></select>
+    <br><br>
+    <label for="date-from">Start date</label>
+    <input type="date" name="date_from" id="date-from" required>
+    <br><br>
+    <label for="date-to">End date</label>
+    <input type="date" name="date_to" id="date-to" required>
+    <br><br>
+    <label for="additional-info">Additional Info</label><br>
+    <input type="text" name="additional_info" id="additional-info">
+    <br><br>
+    <label for="guest-id">Guest Id</label><br>
+    <select id="guest-id" name="guest_id" required></select>
+    <br><br>
+    <input type="submit" value="Book a room">
+</form>
 
-</div>
+<p>Booking ID</p>
+<p id="result"></p>
 
-<script src="./script.js"></script>
+<ul id="bookings-list">
+
+</ul>
 
 </body>
 </html>
